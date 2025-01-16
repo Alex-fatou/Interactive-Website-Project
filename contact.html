@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML - CSS Layout</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="/style/style.css">
 </head>
 
 <body>
+
     <!--NAVBAR-->
     <div class="navbar">
         <div class="container flex">
@@ -25,127 +26,70 @@
         </div>
     </div>
 
-    <!--SHOWCASE-->
-    <header id="showcase">
-        <div class="bg-image"></div>
+    <!-- header image -->
+    <section class="bg-section">
         <div>
-            <h1>Welcome to my Agency</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, sit sed hic quas voluptas ut fugit illum
-                debitis porro ullam.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-    </header>
-
-    <!--SECTION A (Welcome to my Agency)-->
-    <section id="section-a" class="grid">
-        <div class="content-wrap">
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION A">
-            <div class="text-center">
-                <h1>Welcome to my Agency</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa amet molestias quam
-                    accusantium eum, quis eaque dolore vitae ducimus animi assumenda, odit cupiditate deleniti, voluptas
-                    officiis impedit doloremque harum!</p>
-                <a href="" class="btn">Read More</a>
-            </div>
+            <h1>Contact</h1>
         </div>
     </section>
 
-    <!--SECTION B (Our Service)-->
-    <div>
-        <h1> Our Service</h1>
-    </div>
-    <section class="grid-b">
-        <div>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <h2>Service 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa amet molestias quam</p>
-            <a href="" class="btn">Read More</a>
+    <!--Contact Info -->
+    <h1>Contact Info</h1>
+    <section class="contact-container">
+        <div class="contact-box">
+            <img src="/images/check.png" alt="Εικόνα" class="box-image">
+            <h1>Phone Number</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
         </div>
-
-        <div>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <h2>Service 2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa amet molestias quam</p>
-            <a href="" class="btn">Read More</a>
+        <div class="box">
+            <img src="/images/check.png" alt="Εικόνα" class="box-image">
+            <h1>E-Mail</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
         </div>
-
-        <div>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <h2>Service 3</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa amet molestias quam</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-
-        <div>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <h2>Service 4</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa amet molestias quam</p>
-            <a href="" class="btn">Read More</a>
+        <div class="box">
+            <img src="/images/check.png" alt="Εικόνα" class="box-image">
+            <h1>Address</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
         </div>
     </section>
 
-    <!--SECTION C (Our Clients)-->
-    <div>
-        <h1> Our Clients</h1>
+    <!-- contact form -->
+    <div class="contact-section">
+        <div class="contact-form">
+            <h2>Contact us</h2>
+            <form action="#" method="POST">
+                <label for="name">Όνομα:</label>
+                <input type="text" id="name" name="name" placeholder="Το όνομά σας" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Το email σας" required>
+
+                <label for="message">Μήνυμα:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Το μήνυμά σας" required></textarea>
+
+                <button type="submit" class="btn">Αποστολή</button>
+            </form>
+        </div>
+        <div class="contact-image">
+            <img src="/images/close-up-hands-business-concept.jpg" alt="Φωτογραφία Επικοινωνίας">
+        </div>
     </div>
 
-    <section class="grid-c">
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
+    <!-- map -->
+    <div class="map-container">
+        <h2>Find Us</h2>
+        <div class="map-frame">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.617531898657!2d23.705505976419484!3d37.96271550131081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bcf960e63c1d%3A0xc53ae07d3fd51d18!2sLaskaridou%205%2C%20Kallithea%20176%2076!5e0!3m2!1sen!2sgr!4v1737057340436!5m2!1sen!2sgr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-    </section>
-
-
-    <!--SECTION D (Our Projects)-->
-
-    <div>
-        <h1>Our Projects</h1>
     </div>
-    <section class="grid-d">
-        <div>
-            <h2>Project 1</h2>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <a href="" class="btn">Read More</a>
-        </div>
 
-        <div>
-            <h2>Project 2</h2>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <a href="" class="btn">Read More</a>
-        </div>
-
-        <div>
-            <h2>Project 3</h2>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <a href="" class="btn">Read More</a>
-        </div>
-    </section>
 
     <!--FOOTER-->
+
     <div class="container-footer">
         <!-- First sections (logo social icons etc) -->
         <div>
