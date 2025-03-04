@@ -1,11 +1,19 @@
 /* General CSS  */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 :root {
-    --primary-color: #333;
+    --primary-color: #121212;
+    --secondary-color: #202020;
+    --btn-color: #5c45fd;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
     font-size: 1.1em;
     line-height: 1.5;
@@ -32,29 +40,30 @@ a {
 
 .btn {
     display: inline-block;
-    background: #333;
-    color: white;
-    text-decoration: none;
-    padding: 1em 2em;
-    border: 1px solid var(--primary-color);
-    margin: .5em 0;
+    padding: 5px 2px;
+    border-bottom: 1px solid var(--btn-color); 
+    margin: 20px 0px 0px 0px;
 }
 
 .btn:hover {
-    background: #52774c;
+    background:var(--btn-color) ;
     transform: scale(0.95);
+    padding: 8px 12px;
 }
 
 img {
     border-radius: 5px;
 }
 
+.header-color { 
+    color: var(--btn-color);
+    margin-bottom: 20px;
+}
+
 /* NAVBAR*/
 .navbar {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--secondary-color);
     height: 70px;
-    box-shadow: 0 0 10px rgba(215, 216, 214, 0.8);
 }
 
 .navbar .flex {
@@ -71,7 +80,8 @@ img {
 }
 
 .navbar a:hover {
-    border-bottom: 2px #fff solid;
+    border-bottom: 2px var(--btn-color) solid;
+    color: var(--btn-color);
 }
 
 .container {
@@ -120,11 +130,13 @@ img {
 }
 
 #section-a {
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .text-center {
     padding-top: 100px;
+    text-align: left;
 }
 
 .content-wrap img {
@@ -132,6 +144,7 @@ img {
     height: auto;
     border-radius: 5px;
 }
+
 
 /* SECTION B (Our Service) */
 .grid-b {
@@ -142,22 +155,35 @@ img {
 }
 
 .grid-b div {
-    background-color: #16161660;
+    background-color: var(--secondary-color);
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--btn-color);
     border-radius: 5px;
+    text-align: left;
+}
+
+.grid-b div:hover {
+    background: linear-gradient(to bottom, var(--btn-color), rgba(var(--btn-color), 0.1));
 }
 
 .grid-b img {
     max-width: 100%;
     height: auto;
+    margin: 10px 0px 20px 0px;
 }
 
 
 /* SECTION C (Our Clients) */
+.our-clients { 
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
 .grid-c {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    margin-top: 30px;
 }
 
 .grid-c img {
@@ -175,6 +201,7 @@ img {
 .grid-d img {
     max-width: 100%;
     height: 500px;
+
 }
 
 .grid-d div {
@@ -186,9 +213,12 @@ img {
 
 /* FOOTER */
 
-/* logo width */
-.logo-width {
-    max-width: 45%;
+.footer-text {
+    padding: 20px 0px 20px 0px;
+}
+
+.footer-social-padding { 
+    padding-bottom: 35px;
 }
 
 /* social icon padding */
@@ -197,8 +227,7 @@ img {
 }
 
 /* links design */
-.quick-links,
-a {
+.quick-links {
     color: white;
 }
 
@@ -209,17 +238,34 @@ a {
 }
 
 .container-footer {
+    background-color: var(--secondary-color);
     display: flex;
     align-items: start;
     justify-content: space-between;
-    padding: 0px 10% 0px 10%;
+    padding: 30px 10% 0px 10%;
+    text-align: left;
+    margin: 50px 0px 0px 0px;
 }
 
 .copyright {
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
-    padding: 30px 10% 0px 10%;
+    padding: 30px 10% 30px 10%;
+    position: relative;
 }
+
+.copyright::before {
+    content: '';
+    display: block;
+    width: 80%; 
+    margin: 0 auto;
+    border-top: 1px solid var(--btn-color);
+    position: absolute;
+    top: 0;
+    left: 10%; 
+}
+
 
 .copyright-links {
     display: flex;
