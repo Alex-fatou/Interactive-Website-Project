@@ -256,6 +256,18 @@
     overflow: hidden;
 }
 
+.project-column.websites {
+    background-image: url('../images/websites - e-shops.jpg');
+}
+
+.project-column.social-media {
+    background-image: url('../images/Social Media.jpg');
+}
+
+.project-column.digital-solutions {
+    background-image: url('../images/Digital Solutions.jpg');
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -288,12 +300,13 @@
     width: 80%;
 }
 
-/* Responsive*/
+/* Responsive */
 @media (max-width: 1200px) {
     .projects-template {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
 
 /* svg icons */
 .svg-icon {
