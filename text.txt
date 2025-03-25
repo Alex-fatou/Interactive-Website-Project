@@ -1,3 +1,3 @@
-github URL: https://github.com/Alex-fatou/Basic-HTML---CSS-Layout
+github URL: https://github.com/Alex-fatou/Interactive-Website-Project
 
-Netlify URL: https://basic-html-css-layout.netlify.app/
+Netlify URL: https://interactive-website-project.netlify.app/
