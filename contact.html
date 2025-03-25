@@ -5,22 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/contact.css">
+    <script src="./scripts/contact.js" defer></script>
+    <script src="./scripts/scripts.js" defer></script>
 </head>
 
 <body>
 
-    <!--NAVBAR-->
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" onclick="backToTop()">Back to Top</button>
+
+    <!-- MENOU-->
     <div class="navbar">
-        <div class="container flex">
-            <h1 class="logo">Basic HTML - CSS</h1>
+        <div class="container-menou">
+            <a href="./index.html">
+                <h1 class="logo-class">
+                    <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                </h1>
+            </a>
+            <!-- burger menou -->
+            <div class="burger" onclick="toggleMenu()">&#9776;</div>
             <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/service.html">Services</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                <ul id="nav-links">
+                    <li class="nav-links-li"><a href="./index.html">Home</a></li>
+                    <li class="nav-links-li"><a href="./about.html">About</a></li>
+                    <li class="nav-links-li"><a href="./service.html">Services</a></li>
+                    <li class="nav-links-li"><a href="./projects.html">Projects</a></li>
+                    <li class="nav-links-li"><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,56 +41,87 @@
 
     <!-- header image -->
     <section class="bg-section">
-        <div>
+        <div class="content-header-image">
             <h1>Contact</h1>
         </div>
     </section>
 
     <!--Contact Info -->
-    <h1>Contact Info</h1>
     <section class="contact-container">
         <div class="contact-box">
-            <img src="/images/check.png" alt="Εικόνα" class="box-image">
+            <img src="./images/call.png" alt="phone number icon">
             <h1>Phone Number</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
+            <p><a href="tel:6983954710">6983954710</a></p>
         </div>
-        <div class="box">
-            <img src="/images/check.png" alt="Εικόνα" class="box-image">
+        <div class="contact-box">
+            <img src="./images/letter.png" alt="e-mail icon">
             <h1>E-Mail</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
+            <p><a href="mailto:fatoualex@yahoo.gr">fatoualex@yahoo.gr</a></p>
         </div>
-        <div class="box">
-            <img src="/images/check.png" alt="Εικόνα" class="box-image">
+        <div class="contact-box">
+            <img src="./images/location.png" alt="address icon">
             <h1>Address</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
+            <p><a href="https://www.google.com/maps?ll=37.962711,23.708081&z=16&t=m&hl=en&gl=GR&mapclient=embed&q=Laskaridou+5+Kallithea+176+76"
+                    target="_blank">Laskaridou 5 Kallithea</a></p>
         </div>
     </section>
 
     <!-- contact form -->
-    <div class="contact-section">
-        <div class="contact-form">
-            <h2>Contact us</h2>
-            <form action="#" method="POST">
-                <label for="name">Όνομα:</label>
-                <input type="text" id="name" name="name" placeholder="Το όνομά σας" required>
+    <div class="contact-form">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Το email σας" required>
+        <form id="contact-form">
+            <h3 class="header-color-section-a">Contact Form</h3>
+            <div class="input-container">
+                <input id="username" type="text" name="name" class="input" />
+                <label for="username">Username</label>
+            </div>
+            <span id="min-length-username" class="error-message hidden">This username is too short. Username should be
+                at
+                least 5 characters long.</span>
+            <span id="max-length-username" class="error-message hidden">This username is too long. Username should be at
+                up to
+                10 characters long.</span>
+            <span id="no-space-username" class="error-message hidden">This username is wrong. Username should be only
+                one
+                word.</span>
 
-                <label for="message">Μήνυμα:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Το μήνυμά σας" required></textarea>
+            <div class="input-container">
+                <input id="email" type="email" name="email" class="input" />
+                <label for="email">Email</label>
+            </div>
+            <span id="email-format-error" class="error-message hidden">Email must contain '@'.</span>
 
-                <button type="submit" class="btn">Αποστολή</button>
-            </form>
-        </div>
-        <div class="contact-image">
-            <img src="/images/close-up-hands-business-concept.jpg" alt="Φωτογραφία Επικοινωνίας">
-        </div>
+            <div class="input-container">
+                <input id="email-confirm" type="email" name="email-confirm" class="input" />
+                <label for="email-confirm">Email Confirmation</label>
+            </div>
+            <span id="email-confirm-format-error" class="error-message hidden">Email must contain '@'.</span>
+            <span id="email-match-error" class="error-message hidden">The emails do not match.</span>
+
+            <div class="input-container">
+                <input id="phone" type="tel" name="phone" class="input" />
+                <label for="phone">Phone</label>
+            </div>
+            <span id="phone-error" class="error-message hidden">Phone must start with 0030 and contain only
+                numbers.</span>
+
+            <div class="input-container">
+                <input id="Address" type="text" name="Address" class="input" />
+                <label for="username">Address</label>
+            </div>
+
+            <div class="input-container textarea">
+                <textarea id="message" name="message" class="input"></textarea>
+                <label for="message">Message</label>
+            </div>
+            <input type="submit" value="Send" id="btn1" class="submit-btn" />
+
+        </form>
     </div>
 
     <!-- map -->
     <div class="map-container">
-        <h2>Find Us</h2>
+        <h2 class="header-color-section-a">Find Us</h2>
         <div class="map-frame">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.617531898657!2d23.705505976419484!3d37.96271550131081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bcf960e63c1d%3A0xc53ae07d3fd51d18!2sLaskaridou%205%2C%20Kallithea%20176%2076!5e0!3m2!1sen!2sgr!4v1737057340436!5m2!1sen!2sgr"
@@ -88,86 +132,82 @@
     </div>
 
 
-    <!--FOOTER-->
-
-    <div class="container-footer">
-        <!-- First sections (logo social icons etc) -->
-        <div>
-            <!-- <img src="./images/logo.png" alt="logo-website" class="logo-width" /> -->
-            <h1 class="logo">Basic HTML - CSS</h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                nesciunt? <br />orem, ipsum dolor sit amet consectetur
-                adipisicing elit. Quis, nesciunt?
-            </p>
-            <div>
-                <a href="https://www.facebook.com/">
-                    <img src="./images/facebook-app-symbol.png" alt="fb-icon" class="icon-space" /></a>
-                <a href="https://www.instagram.com/">
-                    <img src="./images/instagram.png" alt="insta-icon" class="icon-space" /></a>
-                <a href="https://www.linkedin.com/">
-                    <img src="./images/linkedin.png" alt="linkedin-icon" class="icon-space" /></a>
-                <a href="https://www.twitter.com/">
-                    <img src="./images/twitter.png" alt="twitter-icon" class="icon-space" /></a>
+    <!-- Footer -->
+    <footer class="container-footer">
+        <!-- First section (Logo, social icons, about) -->
+        <div class="footer-section">
+            <a href="./index.html">
+                <h1 class="logo-class">
+                    <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                </h1>
+            </a>
+            <p class="footer-text">We are a dynamic digital agency specializing in website and eCommerce
+                development, social media management, and advertising across all platforms.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./images/facebook-app-symbol.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./images/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="./images/linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="./images/twitter.png" alt="Twitter" />
+                </a>
             </div>
         </div>
 
-        <!-- contact section -->
-        <div>
-            <h3>Contact</h3>
-
-            <div class="containercontact">
-                <img src="./images/maps-and-flags.png" alt="map-icon" class="icon-space" />
-                <p>Lorem ipsum dolor sit amet.</p>
+        <!-- Contact section -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Contact</h3>
+            <div class="contact-item">
+                <img src="./images/maps-and-flags.png" alt="Location" />
+                <p><a href="https://www.google.com/maps?q=Laskaridou+5,+Kallithea" target="_blank">Laskaridou 5,
+                        Kallithea</a></p>
             </div>
-
-            <div class="containercontact">
-                <img src="./images/phone-call.png" alt="phone-icon" class="icon-space" />
-                <p>69 8 39 54 710</p>
+            <div class="contact-item">
+                <img src="./images/phone-call.png" alt="Phone" />
+                <p><a href="tel:+306983954710">69 8 39 54 710</a></p>
             </div>
-
-            <div class="containercontact">
-                <img src="./images/mail.png" alt="mail-icon" class="icon-space" />
-                <p>mail@mail.com</p>
+            <div class="contact-item">
+                <img src="./images/mail.png" alt="Email" />
+                <p><a href="mailto:fatoualex@yahoo.gr">fatoualex@yahoo.gr</a></p>
             </div>
         </div>
 
-        <!-- quick links section -->
-        <div class="quick-links">
-            <h3>Quick Links</h3>
-            <a href="home.com">Home</a>
-            <br />
-            <a href="about.gr">About</a>
-            <br />
-            <a href="schedule.gr">Service</a>
-            <br />
-            <a href="speakers.gr">Blog</a>
-            <br />
-            <a href="contact.gr">Contact</a>
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./service.html">Service</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
         </div>
 
-        <!-- Support Section -->
-        <div>
-            <h3>Support</h3>
-            <a href="help-center.gr">Help Center</a>
-            <br />
-            <a href="privacy-policy.gr">Privacy Policy</a>
-            <br />
-            <a href="disclaimer.gr">Disclaimer</a>
-            <br />
-            <a href="faqs.gr">FAQs</a>
+        <!-- Support -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Support</h3>
+            <ul class="footer-links">
+                <li><a href="./policies-support.html">Help Center</a></li>
+                <li><a href="./policies-support.html">Disclaimer</a></li>
+                <li><a href="./policies-support.html">FAQs</a></li>
+            </ul>
         </div>
-    </div>
+    </footer>
 
-    <!-- copyright section -->
+    <hr>
+
+    <!-- Copyright Section -->
     <div class="copyright">
-        <div>
-            <p>Copyright © 2024 Alex Fatou</p>
-        </div>
+        <p>Copyright © 2024 Alex Fatou</p>
         <div class="copyright-links">
-            <a href="privacy-policy.gr" class="copyright-href">Privacy Policy</a>
-            <br />
-            <a href="term-&-services.gr">Term & Services</a>
+            <a href="./policies-support.html">Privacy Policy</a>
+            <a href="./policies-support.html">Term & Services</a>
         </div>
     </div>
 

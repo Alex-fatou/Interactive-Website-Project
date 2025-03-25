@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/project.css">
+    <script src="./scripts/scripts.js" defer></script>
+    <script src="./scripts/project.js" defer></script>
+</head>
+
+<body>
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" onclick="backToTop()">Back to Top</button>
+
+    <!-- MENOU-->
+    <div class="navbar">
+        <div class="container-menou">
+            <a href="./index.html">
+                <h1 class="logo-class">
+                    <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                </h1>
+            </a>
+            <!-- burger menou -->
+            <div class="burger" onclick="toggleMenu()">&#9776;</div>
+            <nav>
+                <ul id="nav-links">
+                    <li class="nav-links-li"><a href="./index.html">Home</a></li>
+                    <li class="nav-links-li"><a href="./about.html">About</a></li>
+                    <li class="nav-links-li"><a href="./service.html">Services</a></li>
+                    <li class="nav-links-li"><a href="./projects.html">Projects</a></li>
+                    <li class="nav-links-li"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- header image -->
+    <section class="bg-section">
+        <div class="content-header-image">
+            <h1>Projects</h1>
+        </div>
+    </section>
+
+    <!-- Filter -->
+    <div class="filter">
+        <ul>
+            <li>
+                <h3><a href="#" class="btn" onclick="filterImages('all', event)">All</a></h3>
+            </li>
+            <li>
+                <h3><a href="#" class="btn" onclick="filterImages('development', event)">Websites - E-Shops</a></h3>
+            </li>
+            <li>
+                <h3><a href="#" class="btn" onclick="filterImages('social', event)">Social Media</a></h3>
+            </li>
+            <li>
+                <h3><a href="#" class="btn" onclick="filterImages('digital', event)">Digital Solutions</a></h3>
+            </li>
+        </ul>
+    </div>
+
+    <div id="filter-image"></div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <img id="lightbox-img" src="" alt="lightbox image">
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="container-footer">
+        <!-- First section (Logo, social icons, about) -->
+        <div class="footer-section">
+            <a href="./index.html">
+                <h1 class="logo-class">
+                    <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                </h1>
+            </a>
+            <p class="footer-text">We are a dynamic digital agency specializing in website and eCommerce
+                development, social media management, and advertising across all platforms.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./images/facebook-app-symbol.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./images/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="./images/linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="./images/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact section -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Contact</h3>
+            <div class="contact-item">
+                <img src="./images/maps-and-flags.png" alt="Location" />
+                <p><a href="https://www.google.com/maps?q=Laskaridou+5,+Kallithea" target="_blank">Laskaridou 5,
+                        Kallithea</a></p>
+            </div>
+            <div class="contact-item">
+                <img src="./images/phone-call.png" alt="Phone" />
+                <p><a href="tel:+306983954710">69 8 39 54 710</a></p>
+            </div>
+            <div class="contact-item">
+                <img src="./images/mail.png" alt="Email" />
+                <p><a href="mailto:fatoualex@yahoo.gr">fatoualex@yahoo.gr</a></p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./service.html">Service</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Support</h3>
+            <ul class="footer-links">
+                <li><a href="./policies-support.html">Help Center</a></li>
+                <li><a href="./policies-support.html">Disclaimer</a></li>
+                <li><a href="./policies-support.html">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <hr>
+
+    <!-- Copyright Section -->
+    <div class="copyright">
+        <p>Copyright © 2024 Alex Fatou</p>
+        <div class="copyright-links">
+            <a href="./policies-support.html">Privacy Policy</a>
+            <a href="./policies-support.html">Term & Services</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

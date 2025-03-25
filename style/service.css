@@ -1,0 +1,148 @@
+/* services */
+.services {
+    padding: 50px 20px;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    background: #202020;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(3, 0, 0);
+    transition: transform 0.3s ease;
+    border-left: 5px solid #9F90FD;
+}
+
+.service:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.service:hover {
+    transform: scale(1.02);
+}
+
+.service img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.service-content {
+    width: 80%;
+    padding: 20px;
+    text-align: left;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .service img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .service-content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* service animation */
+.service {
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.service.visible {
+    opacity: 1;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* reviews */
+.reviews {
+    padding: 50px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.review-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.review {
+    background-color: #202020;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-10px);
+}
+
+.review-text {
+    font-style: italic;
+}
+
+.customer-name {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #9F90FD;
+}

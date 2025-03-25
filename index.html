@@ -4,226 +4,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML - CSS Layout</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <title>Home - CodeCraft </title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/home.css">
+    <script src="./scripts/scripts.js" defer></script>
+    <script src="./scripts/slider.js" defer></script>
 </head>
 
 <body>
-    <!--NAVBAR-->
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" onclick="backToTop()">Back to Top</button>
+
+    <!-- Menou-->
     <div class="navbar">
-        <div class="container flex">
-            <a href="/index.html"><h1 >Basic HTML - CSS</h1></a>              
+        <div class="container-menou">
+            <a href="./index.html">
+                <h1 class="logo-class">
+                    <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                </h1>
+            </a>
+            <!-- burger menou -->
+            <div class="burger" onclick="toggleMenu()">&#9776;</div>
             <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/service.html">Services</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                <ul id="nav-links">
+                    <li class="nav-links-li"><a href="./index.html">Home</a></li>
+                    <li class="nav-links-li"><a href="./about.html">About</a></li>
+                    <li class="nav-links-li"><a href="./service.html">Services</a></li>
+                    <li class="nav-links-li"><a href="./projects.html">Projects</a></li>
+                    <li class="nav-links-li"><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
-    <!--SHOWCASE-->
-    <header id="showcase">
-        <div class="bg-image"></div>
-        <div>
-            <h1>Welcome to my Agency</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, sit sed hic quas voluptas ut fugit illum
-                debitis porro ullam.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-    </header>
-
-    <!--SECTION A (Welcome to my Agency)-->
-    <section id="section-a" class="grid">
-        <div class="content-wrap">
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION A">
-            <div class="text-center">
-                <h1 class="header-color">Welcome to my Agency</h1>
-                <p>We are a dynamic digital agency specializing in website and eCommerce development, social media management, and advertising across all platforms. Our goal is to help businesses grow by creating impactful online experiences and targeted marketing strategies. With a passion for innovation and results-driven solutions, we turn ideas into digital success.</p>
-                <a href="" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!--SECTION B (Our Service)-->
+    <!-- Slider  -->
     <div>
-        <h1 class="header-color"> Our Service</h1>
+        <div class="slider display-block">
+            <img src="./images/slide-1.png" alt="Slide 1" />
+        </div>
+
+        <div class="slider display-none">
+            <img src="./images/slide-2.png" alt="Slide 2" />
+        </div>
+
+        <div class="slider display-none">
+            <img src="./images/slide-3.png" alt="Slide 3" />
+        </div>
+
+        <div class="slider display-none">
+            <img src="./images/slide-4.png" alt="Slide 4" />
+        </div>
+
+        <div class="slider display-none">
+            <img src="./images/slide-5.png" alt="Slide 5" />
+        </div>
+
+        <div class="slider display-none">
+            <img src="./images/slide-6.png" alt="Slide 6" />
+        </div>
+
+        <!-- bullets -->
+        <ul class="bullets-slide">
+            <li onclick="setSlide(0)"></li>
+            <li onclick="setSlide(1)"></li>
+            <li onclick="setSlide(2)"></li>
+            <li onclick="setSlide(3)"></li>
+            <li onclick="setSlide(4)"></li>
+            <li onclick="setSlide(5)"></li>
+        </ul>
+
+        <!-- extra buttons  for Petro
+    <div class="controls">
+        <button onclick="setPreviousSlide()">Previous</button>
+        <button onclick="setNextSlide()">Next</button>
+        <button onclick="startLoop()">Start loop</button>
+        <button onclick="stopLoop()">Stop loop</button>
+
+        <label for="slideInterval">Set your time (ms):</label>
+        <input type="number" id="slideInterval" value="3000" min="1000" step="500">
+        <button onclick="updateInterval()">Update</button>
     </div>
-    <section class="grid-b">
-        <div>
-            <img src="/images/web.png" alt="SECTION B">
-            <h2>Websites</h2>
-            <p>We create modern, responsive, and high-performing websites tailored to your needs, ensuring a seamless user experience and business growth.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
+</div>-->
 
-        <div>
-            <img src="/images/E-Shop.png" alt="SECTION B">
-            <h2>E-Shop</h2>
-            <p>We create custom websites that are responsive, user-friendly, and optimized to boost your online presence and business success.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-
-        <div>
-            <img src="/images/social-media-management.png" alt="SECTION B">
-            <h2>Social Media</h2>
-            <p>We manage your social media to enhance engagement, grow your audience, and build a strong, consistent online brand presence.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-
-        <div>
-            <img src="/images/content.png" alt="SECTION B">
-            <h2>Digital Solutions</h2>
-            <p>We create targeted ads that maximize reach, drive conversions, and boost your brand’s visibility across all digital platforms.</p>
-            <a href="" class="btn">Read More</a>
-        </div>
-    </section>
-
-    <!--SECTION C (Our Clients)-->
-<div class="our-clients">
-
-    <div>
-        <h1 class="header-color"> Our Clients</h1>
-    </div>
-
-    <section class="grid-c">
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-    </section>
-</div>
-
-
-    <!--SECTION D (Our Projects)-->
-
-    <div>
-        <h1 class="header-color">Our Projects</h1>
-    </div>
-    <section class="grid-d">
-        <div>
-            <h2>Project 1</h2>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <a href="" class="btn">Read More</a>
-        </div>
-
-        <div>
-            <h2>Project 2</h2>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <a href="" class="btn">Read More</a>
-        </div>
-
-        <div>
-            <h2>Project 3</h2>
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION B">
-            <a href="" class="btn">Read More</a>
-        </div>
-    </section>
-
-    <!--FOOTER-->
-    <div class="container-footer">
-        <!-- First sections (logo social icons etc) -->
-        <div>
-
-           <a href="/index.html"><h1 >Basic HTML - CSS</h1></a> 
-            <p class="footer-text"> We are a dynamic digital agency specializing in website and eCommerce<br> 
-            development, social media management, and advertising across all platforms.</p>
-            <div class="footer-social-padding">
-                <a href="https://www.facebook.com/">
-                    <img src="./images/facebook-app-symbol.png" alt="fb-icon" class="icon-space" /></a>
-                <a href="https://www.instagram.com/">
-                    <img src="./images/instagram.png" alt="insta-icon" class="icon-space" /></a>
-                <a href="https://www.linkedin.com/">
-                    <img src="./images/linkedin.png" alt="linkedin-icon" class="icon-space" /></a>
-                <a href="https://www.twitter.com/">
-                    <img src="./images/twitter.png" alt="twitter-icon" class="icon-space" /></a>
+        <!--Section A (Welcome to my Agency)-->
+        <section id="section-a" class="width-sections">
+            <div class="content-wrap">
+                <img src="./images/close-up-hands-business-concept.jpg" alt="Welcome to my Agency">
+                <div>
+                    <h1 class="header-color-section-a">Welcome to my Agency</h1>
+                    <p>We are a dynamic digital agency specializing in website and eCommerce development, social media
+                        management, and advertising across all platforms. Our goal is to help businesses grow by
+                        creating impactful online experiences and targeted marketing strategies. With a passion for
+                        innovation and results-driven solutions, we turn ideas into digital success.</p>
+                    <a href="./about.html" class="btn">Read More</a>
+                </div>
             </div>
+        </section>
+
+
+        <!-- Why Choose Us -->
+        <div class="container-why-us">
+            <section class="why-choose-us">
+                <div class="content">
+                    <h3 class="subtitle">Why Choose Us</h3>
+                    <h1 class="title">Excellence <br> Simplified.</h1>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <h2><span>01.</span>Innovative Solutions</h2>
+                        <p>Custom websites and e-shops for maximum impact.</p>
+                    </div>
+                    <div class="feature">
+                        <h2><span>02.</span>Strategic Vision</h2>
+                        <p>Smart digital strategies for long-term success.</p>
+                    </div>
+                    <div class="feature">
+                        <h2><span>03.</span>Proven Expertise</h2>
+                        <p>Years of experience in online brand growth.</p>
+                    </div>
+                    <div class="feature">
+                        <h2><span>04.</span> Result-Driven Approach</h2>
+                        <p>Focused on measurable success and business growth.</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <!-- contact section -->
+        <!--Section Our Service-->
         <div>
-            <h3 class="header-color">Contact</h3>
+            <h1 class="header-color"> Our Service</h1>
+        </div>
+        <section class="grid-b" class="width-sections">
+            <div>
+                <section class="svg-icon">
+                    <svg id="svg31911" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                        xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <g id="Window">
+                            <path
+                                d="M96,296V96h320v200c-.2,10.9,16.2,10.9,16,0V40c0-13.2-10.8-24-24-24H104c-13.2,0-24,10.8-24,24v256c0,10.7,16,10.7,16,0ZM96,40c0-4.6,3.4-8,8-8h304c4.6,0,8,3.4,8,8v40H96v-40Z" />
+                            <circle cx="120" cy="56" r="8" />
+                            <circle cx="152" cy="56" r="8" />
+                            <circle cx="184" cy="56" r="8" />
+                            <path d="M392,48h-96.4c-10.8.7-10.1,16.3.4,16h96c10.4-.2,10.4-15.8,0-16Z" />
+                        </g>
+                        <g id="Brackets">
+                            <path
+                                d="M272.4,133.5l-48,144c-3.4,10.1,11.8,15.2,15.2,5.1l48-144c1.8-5.2-2-10.6-7.5-10.6-3.5,0-6.6,2.3-7.7,5.6Z" />
+                            <path
+                                d="M325.1,254.1l48-40c3.8-3.2,3.8-9.1,0-12.3l-48-40c-1.4-1.2-3.3-1.9-5.5-1.9-7.6.7-10.3,9.7-4.7,14.2h0s40.6,33.9,40.6,33.9l-40.6,33.8c-8.7,6.8,2,19.6,10.3,12.3Z" />
+                            <path
+                                d="M191.8,159.9h0c-1.8,0-3.5.7-4.9,1.9l-48,40c-3.8,3.2-3.8,9.1,0,12.3l48,40c8.3,7.7,19.3-5.6,10.2-12.3l-40.6-33.8,40.6-33.9c5.9-4.8,2.3-14.4-5.3-14.2Z" />
+                        </g>
+                        <g id="PC">
+                            <path
+                                d="M472,64h-16c-10.9-.2-10.9,16.2,0,16h16c4.6,0,8,3.4,8,8v232H32V88c0-4.6,3.5-8,8-8h15.9c10.9.2,10.9-16.2,0-16h-15.9c-13.2,0-24,10.8-24,24v288c0,13.2,10.9,24,24,24h432c13.2,0,24-10.8,24-24V88c0-13.2-10.8-24-24-24ZM480,376c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8v-40s448,0,448,0v40Z" />
+                            <path d="M240,368h32c11,1,11.9-15.7.4-16h-32.8c-10.2,1.2-9.5,15.7.4,16Z" />
+                            <path
+                                d="M344,448h-13c-11.9-10-18.8-19.6-22.7-27.9-1.4-3-4.4-4.9-7.7-4.7-5.7.3-9.3,6.3-6.8,11.5,3.1,6.7,7.9,13.9,14.3,21.1h-104.3c6.4-7.3,11.2-14.5,14.3-21.1,2.5-5.2-1.2-11.4-7-11.5-3.2,0-6.2,1.8-7.5,4.7-3.9,8.3-10.8,17.9-22.7,27.9h-13c-13.2,0-24,10.9-24,24v15.9c0,4.4,3.6,8,8,8h208c4.4,0,8-3.6,8-8v-15.9c0-13.2-10.9-24-24-24ZM352,480h-192v-8c0-4.6,3.4-8,8-8h0,176c4.6,0,8,3.5,8,8v8Z" />
+                        </g>
+                    </svg>
+                </section>
+                <h2>Websites</h2>
+                <p>We create modern, responsive, and high-performing websites tailored to your needs, ensuring a
+                    seamless user experience and business growth.</p>
+                <a href="./service.html" class="btn">Read More</a>
+            </div>
+            <div>
+                <section class="svg-icon">
+                    <svg id="Online_Store" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+                        <defs>
+                            <style>
+                                .st0 {
+                                    fill: #fff;
+                                }
 
-            <div class="containercontact">
-                <img src="./images/maps-and-flags.png" alt="map-icon" class="icon-space" />
-                <p>Lorem ipsum dolor sit amet.</p>
+                                .st1 {
+                                    fill: none;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Cart">
+                            <path
+                                d="M237.7,355.1c-10.8,0-19.6,8.8-19.6,19.6s8.8,19.6,19.6,19.6,19.6-8.8,19.6-19.6-8.8-19.6-19.6-19.6ZM234.6,374.8c0-1.7,1.4-3.1,3.1-3.1s3.1,1.4,3.1,3.1c0,3.4-6.2,3.4-6.2,0Z" />
+                            <path
+                                d="M311.5,355.1c-10.8,0-19.6,8.8-19.6,19.6s8.8,19.6,19.6,19.6,19.6-8.8,19.6-19.6-8.8-19.6-19.6-19.6ZM308.4,374.8c0-1.7,1.4-3.1,3.1-3.1s3.1,1.4,3.1,3.1c0,3.4-6.2,3.4-6.2,0Z" />
+                            <path
+                                d="M358,198.5h-187.6l-4.9-18.3c-2.5-9.3-10.9-15.8-20.5-15.8h-12.3c-4.6,0-8.3,3.7-8.3,8.3s3.7,8.3,8.3,8.3h12.3c2.1,0,4,1.4,4.6,3.5l39.4,147.5c2.9,10.8,12.7,18.4,23.9,18.4h132.4c4.6,0,8.3-3.7,8.3-8.3s-3.7-8.3-8.3-8.3h-132.4c-3.7,0-7-2.5-8-6.1l-3-11.3h124.3c15,0,28.1-10.1,32-24.6l18.4-69.2c1.5-5.8.3-11.9-3.3-16.7-3.7-4.8-9.2-7.5-15.2-7.5ZM174.8,215h33.5l4.6,34.2h-28.9l-9.2-34.2ZM197.6,299.9l-9.2-34.2h26.8l4.6,34.2h-22.2ZM259.9,299.9h-23.4l-4.6-34.2h28.1v34.2ZM259.9,249.2h-30.3l-4.6-34.2h35v34.2ZM300,299.9h-23.5v-34.2h28.1l-4.6,34.2ZM306.8,249.2h-30.3v-34.2h35l-4.6,34.2ZM342.2,287.7c-1.9,7.2-8.5,12.3-16,12.3h-9.6l4.6-34.2h26.8l-5.8,21.9ZM360.6,218.4l-8.2,30.8h-29l4.6-34.2h30c1.2,0,1.8.7,2.1,1.1h0c.3.4.8,1.2.5,2.4Z" />
+                        </g>
+                        <g id="Browser">
+                            <path
+                                d="M57.7,82.2h85c4.3,0,7.7-3.5,7.7-7.7s-3.5-7.7-7.7-7.7H57.7c-4.3,0-7.7,3.5-7.7,7.7s3.5,7.7,7.7,7.7Z" />
+                            <circle cx="375.4" cy="74.5" r="8.3" transform="translate(57.3 287.3) rotate(-45)" />
+                            <circle cx="409.5" cy="74.5" r="8.3" transform="translate(67.3 311.4) rotate(-45)" />
+                            <circle cx="443.5" cy="74.5" r="8.3" transform="translate(77.2 335.5) rotate(-45)" />
+                            <path class="st1"
+                                d="M474.7,95.8v-14.2c0-15.7-12.8-28.5-28.6-28.5H55.5c-15.8,0-28.6,12.8-28.6,28.5v14.2h447.8Z" />
+                            <path
+                                d="M491,77c0-.8-.2-1.5-.3-2.2-.3-2.2-.9-4.4-1.5-6.5-.4-1.4-.9-2.8-1.5-4.1-.6-1.3-1.2-2.7-1.9-3.9-.7-1.3-1.4-2.5-2.3-3.7-.6-.9-1.3-1.8-2-2.7-1.1-1.4-2.2-2.7-3.4-3.9,0,0,0,0,0,0-1.3-1.3-2.7-2.5-4.2-3.7-2-1.5-4-2.9-6.2-4.1-.6-.3-1.3-.7-1.9-1-1.3-.6-2.7-1.2-4-1.7-4.8-1.8-10-2.7-15.5-2.7H55.5c-5.4,0-10.6,1-15.5,2.7-1.4.5-2.7,1.1-4,1.7-.7.3-1.3.6-1.9,1-2.2,1.2-4.3,2.6-6.2,4.1-2.8,2.2-5.4,4.8-7.7,7.6-.7.9-1.4,1.8-2,2.7-.8,1.2-1.6,2.4-2.3,3.7-.7,1.3-1.3,2.6-1.9,3.9-.6,1.3-1.1,2.7-1.5,4.1-.7,2.1-1.2,4.3-1.5,6.5-.1.7-.2,1.5-.3,2.2-.2,1.5-.2,3-.2,4.6v322.6c0,24.8,20.2,45,45,45h390.6c24.8,0,45-20.2,45-45V81.6c0-1.6,0-3.1-.2-4.6ZM55.5,53.1h390.6c.5,0,1,0,1.5,0,11.2.6,20.7,7.6,24.8,17.4.2.4.4.9.5,1.3,1.1,3.1,1.7,6.3,1.7,9.8v14.2H27v-14.2c0-3.4.6-6.7,1.7-9.8.2-.4.3-.9.5-1.3,4.2-9.8,13.7-16.8,24.8-17.4.5,0,1,0,1.5,0ZM474.7,404.2c0,15.7-12.8,28.5-28.6,28.5H55.5c-15.8,0-28.6-12.8-28.6-28.5v-44.8h0V112.4h447.8v247h0v44.8Z" />
+                        </g>
+                        <g id="Arrow">
+                            <path
+                                d="M516.4,420.7h0s-25.3-21.4-25.3-21.4l-16.4-13.8-44.6-37.6c-5.1-4.3-12-5.2-18.1-2.4-6,2.8-9.8,8.7-9.8,15.4h0s0,65.4,0,65.4h0v16.6h0v30.9c0,6.7,3.8,12.5,9.8,15.4,6,2.8,12.9,1.9,18-2.3l15.5-12.9,8.6,18.5c2.7,5.8,7.4,10.2,13.4,12.3,2.7,1,5.4,1.5,8.2,1.5s6.8-.7,10-2.2c5.8-2.7,10.1-7.5,12.3-13.4,2.2-6,1.9-12.5-.8-18.2l-8.6-18.5,19.8-3.5c6.5-1.2,11.7-5.9,13.4-12.3,1.7-6.4-.4-13.1-5.5-17.4ZM505.5,434.2l-30.3,5.4c-2.5.5-4.7,2-5.9,4.3-1.2,2.3-1.2,5-.2,7.3l13.1,28.3c.8,1.7.9,3.7.2,5.5-.7,1.8-2,3.3-3.8,4.1-1.8.8-3.8.9-5.6.2-1.8-.7-3.3-2-4.1-3.8l-13.1-28.2c-1.1-2.3-3.2-4-5.7-4.6-.6-.1-1.2-.2-1.8-.2-1.9,0-3.8.7-5.3,1.9l-24.5,19.4.7-113.3,86.3,72.8-.2.8Z" />
+                            <path class="st0"
+                                d="M418.7,473.8l24.5-19.4c1.5-1.2,3.4-1.9,5.3-1.9s1.2,0,1.8.2c2.5.6,4.6,2.3,5.7,4.6l13.1,28.2c.8,1.8,2.3,3.1,4.1,3.8,1.8.7,3.8.6,5.6-.2,1.7-.8,3.1-2.3,3.8-4.1.7-1.8.6-3.8-.2-5.5l-13.1-28.3c-1.1-2.3-1-5,.2-7.3,1.2-2.3,3.4-3.9,5.9-4.3l30.3-5.4.2-.8-86.3-72.8-.7,113.3Z" />
+                        </g>
+                    </svg>
+                </section>
+                <h2>E-Shop</h2>
+                <p>We create custom websites that are responsive, user-friendly, and optimized to boost your online
+                    presence and business success.</p>
+                <a href="./service.html" class="btn">Read More</a>
+            </div>
+            <div>
+                <section class="svg-icon">
+                    <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+                        <g id="Laptop">
+                            <path
+                                d="M296,432h-16v-78.4c0-4.4-3.6-8-8-8s-8,3.6-8,8v78.4H56v-160h66.6c4.4,0,8-3.6,8-8s-3.6-8-8-8H48c-4.4,0-8,3.6-8,8v168h-16c-4.4,0-8,3.6-8,8v16c0,22.1,17.9,40,40,40h208c22.1,0,40-17.9,40-40v-16c0-4.4-3.6-8-8-8ZM288,456c0,13.3-10.7,24-24,24h-16v-8c0-4.4-3.6-8-8-8s-8,3.6-8,8v8H88v-8c0-4.4-3.6-8-8-8s-8,3.6-8,8v8h-16c-13.3,0-24-10.7-24-24v-8h256v8Z" />
+                        </g>
+                        <g id="FB">
+                            <path
+                                d="M432,64h16c4.4,0,8-3.6,8-8s-3.6-8-8-8h-16c-13.3,0-24,10.7-24,24v8h-8c-4.4,0-8,3.6-8,8s3.6,8,8,8h8v24c0,4.4,3.6,8,8,8s8-3.6,8-8v-24h8c4.4,0,8-3.6,8-8s-3.6-8-8-8h-8v-8c0-4.4,3.6-8,8-8Z" />
+                            <path
+                                d="M472,16h-96c-13.3,0-24,10.7-24,24v16c0,4.4,3.6,8,8,8s8-3.6,8-8v-16c0-4.4,3.6-8,8-8h96c4.4,0,8,3.6,8,8v96c0,4.4-3.6,8-8,8h-96c-4.4,0-8-3.6-8-8v-48c0-4.4-3.6-8-8-8s-8,3.6-8,8v48c0,13.3,10.7,24,24,24h96c13.3,0,24-10.7,24-24V40c0-13.3-10.7-24-24-24Z" />
+                        </g>
+                        <g id="Insta">
+                            <path
+                                d="M392,336c0,17.7,14.3,32,32,32s32-14.3,32-32-14.3-32-32-32-32,14.3-32,32ZM440,336c0,8.8-7.2,16-16,16s-16-7.2-16-16,7.2-16,16-16,16,7.2,16,16Z" />
+                            <path
+                                d="M472,264h-96c-13.3,0-24,10.7-24,24v96c0,13.3,10.7,24,24,24h96c13.3,0,24-10.7,24-24v-16c0-4.4-3.6-8-8-8s-8,3.6-8,8v16c0,4.4-3.6,8-8,8h-96c-4.4,0-8-3.6-8-8v-96c0-4.4,3.6-8,8-8h96c4.4,0,8,3.6,8,8v48c0,4.4,3.6,8,8,8s8-3.6,8-8v-48c0-13.3-10.7-24-24-24Z" />
+                        </g>
+                        <g id="Play">
+                            <path
+                                d="M195.8,110.8c1.3.8,2.7,1.2,4.2,1.2,1.3,0,2.5-.3,3.6-.9l48-24c3.9-2,5.5-6.8,3.5-10.8-.8-1.5-2-2.7-3.5-3.5l-48-24c-3.9-2-8.8-.4-10.7,3.5-.6,1.1-.9,2.3-.9,3.6v48c0,2.8,1.4,5.3,3.8,6.8ZM208,69l22.1,11-22.1,11v-22.1Z" />
+                            <path
+                                d="M216,152c39.8,0,72-32.2,72-72S255.8,8,216,8s-72,32.2-72,72,32.2,72,72,72ZM216,24c30.9,0,56,25.1,56,56s-25.1,56-56,56-56-25.1-56-56,25.1-56,56-56Z" />
+                        </g>
+                        <g id="Doc">
+                            <path
+                                d="M24,232h96c4.4,0,8-3.6,8-8V96c0-4.4-3.6-8-8-8H24c-4.4,0-8,3.6-8,8v128c0,4.4,3.6,8,8,8ZM32,104h80v112H32v-112Z" />
+                            <path d="M88,120h-16c-4.4,0-8,3.6-8,8s3.6,8,8,8h16c4.4,0,8-3.6,8-8s-3.6-8-8-8Z" />
+                            <path d="M88,152h-32c-4.4,0-8,3.6-8,8s3.6,8,8,8h32c4.4,0,8-3.6,8-8s-3.6-8-8-8Z" />
+                            <path d="M88,184h-32c-4.4,0-8,3.6-8,8s3.6,8,8,8h32c4.4,0,8-3.6,8-8s-3.6-8-8-8Z" />
+                        </g>
+                        <g id="LoudSpeaker">
+                            <path
+                                d="M296,184c2.5,0,4.9-1.2,6.4-3.2l24-32c2.6-3.5,1.9-8.6-1.6-11.2-3.5-2.6-8.5-1.9-11.2,1.6l-24,32c-2.7,3.5-1.9,8.5,1.6,11.2,1.4,1,3.1,1.6,4.8,1.6Z" />
+                            <path
+                                d="M313.6,212.8c1.5,2,3.9,3.2,6.4,3.2s3.4-.6,4.8-1.6l32-24c3.5-2.7,4.3-7.7,1.6-11.2-2.7-3.5-7.7-4.3-11.2-1.6l-32,24c-3.5,2.7-4.3,7.7-1.6,11.2h0Z" />
+                            <path
+                                d="M392,230.4c-.8-4.3-4.9-7.2-9.3-6.5-.1,0-.2,0-.3,0l-40,8c-4.4.4-7.6,4.4-7.2,8.8.4,4.4,4.4,7.6,8.8,7.2h1.6l40-8c4.3-.8,7.2-4.9,6.5-9.3,0-.1,0-.2,0-.3Z" />
+                            <path
+                                d="M289,229.6c-2.2-3.8-7.1-5.2-11-3-3.8,2.2-5.2,7.1-3,11l35.3,61-128,48h-1.2l-20.8,12-13.8,8c-3.7,2.1-8.1,2.7-12.2,1.6-4.1-1.1-7.6-3.8-9.7-7.4l-16-27.7c-3.9-7.5-1.3-16.8,6-21.1l27.7-16,20,34.6c1.4,2.5,4.1,4,7,4,4.4,0,8-3.5,8-8,0-1.4-.4-2.8-1.1-4l-20.6-35.7,100.4-82.8,3.3,5.7c2.2,3.8,7.1,5.2,11,3,3.8-2.2,5.2-7.1,3-11l-8-13.8c-1.2-2-3.2-3.4-5.5-3.8-2.3-.4-4.7.2-6.6,1.7l-112,92.3-34.1,19.7c-12.6,7.3-18.6,22.2-14.7,36.2l-8,4.6c-11.5,6.6-15.5,21.3-8.9,32.8,3.2,5.5,8.4,9.6,14.6,11.2,2,.5,4.1.8,6.2.8,4.2,0,8.3-1.1,12-3.2l8-4.6c3.8,4,8.7,6.8,14,8.3,2.7.8,5.6,1.1,8.4,1.1,5.6,0,11.1-1.5,16-4.3l7-4,16,27.8c6.6,11.4,21.3,15.4,32.7,8.8,11.5-6.6,15.4-21.3,8.8-32.8h0s-14.6-25.4-14.6-25.4l120-45c2.2-.8,3.9-2.6,4.7-4.8.8-2.2.6-4.6-.6-6.6l-39.8-69.1ZM100,366.3c-1.8,1.1-4,1.4-6.1.8-2-.5-3.8-1.9-4.9-3.7-1.1-1.8-1.4-4-.8-6.1.6-2.1,1.9-3.8,3.8-4.9l7-4,8,13.8-7,4ZM205.3,388.7c1.1,1.8,1.4,4,.8,6.1-.6,2-1.9,3.8-3.8,4.8-3.8,2.2-8.7.9-10.9-2.9l-16-27.8,13.3-7.6h.6l15.9,27.4Z" />
+                        </g>
+                    </svg>
+                </section>
+                <h2>Social Media</h2>
+                <p>We manage your social media to enhance engagement, grow your audience, and build a strong, consistent
+                    online brand presence.</p>
+                <a href="./service.html" class="btn">Read More</a>
+            </div>
+            <div>
+                <section class="svg-icon">
+                    <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 512 512">
+                        <defs>
+                            <style>
+                                .st0 {
+                                    fill: #fff;
+                                }
+                            </style>
+                        </defs>
+                        <path id="PC"
+                            d="M476.1,64.8h-139.5,0s-291.2,0-291.2,0c-25,0-45.3,20.3-45.3,45.3v282.4c0,25,20.3,45.3,45.3,45.3h140.4c1.7,15.3.6,33.6-3,51.5h-56.3c-5.5,0-10,4.5-10,10s4.5,10,10,10h259.1c5.5,0,10-4.5,10-10s-4.5-10-10-10h-56.9c-3.9-18-5.2-36.4-3.5-51.5h141.5c25,0,45.3-20.3,45.3-45.3V100.8c0-19.8-16.1-36-35.9-36ZM203.2,489.4c3.2-17.8,4.2-35.8,2.7-51.5h99.2c-1.4,15.5-.3,33.6,3.2,51.5h-105.1ZM492,392.5c0,14-11.4,25.3-25.3,25.3H45.3c-14,0-25.3-11.4-25.3-25.3v-24.9h472v24.9ZM492,347.6H20V110.1c0-14,11.4-25.3,25.3-25.3h281.5s149.2,0,149.2,0c8.8,0,15.9,7.2,15.9,16v246.9Z" />
+                        <g id="Pencil">
+                            <rect class="st0" x="125.7" y="120.5" width="163.9" height="49.9"
+                                transform="translate(-22.2 252.5) rotate(-60)" />
+                            <polygon class="st0" points="141.4 260.2 171.9 242.5 141.4 224.9 141.4 260.2" />
+                            <path class="st0"
+                                d="M278.1,23.3c-11.9-6.9-27.2-2.8-34,9.1l-7.1,12.3,43.2,24.9,7.1-12.3c6.9-11.9,2.8-27.2-9.1-34Z" />
+                            <path
+                                d="M288.1,6c-21.5-12.4-49-5-61.4,16.4l-22.9,39.7-11.5,20-69.5,120.5c-.9,1.5-1.3,3.2-1.3,5v69.9c0,5.5,4.5,10,10,10h.9l36.4-20,28.2-16.3c1.5-.9,2.8-2.1,3.7-3.7l95.5-165.4,11.1-20c8.5-20.5.7-44.7-19-56.1ZM141.4,260.2v-35.2l30.5,17.6-30.5,17.6ZM188.2,228.9l-43.2-24.9L227,62l43.2,24.9-81.9,141.9ZM287.3,57.4l-7.1,12.3-43.2-24.9,7.1-12.3c6.9-11.9,22.1-16,34-9.1,11.9,6.9,16,22.1,9.1,34Z" />
+                        </g>
+                        <g id="Lines">
+                            <path
+                                d="M267,219.6c0,5.5,4.5,10,10,10h103.6c5.5,0,10-4.5,10-10s-4.5-10-10-10h-103.6c-5.5,0-10,4.5-10,10Z" />
+                            <path
+                                d="M380.6,290.1c5.7,0,10.3-4.8,10-10.6s-5-9.4-10.4-9.4h-248.8c-5.5,0-10,4.5-10,10h0c0,5.5,4.5,10,10,10h249.2Z" />
+                        </g>
+                    </svg>
+                </section>
+                <h2>Digital Solutions</h2>
+                <p>We create targeted ads that maximize reach, drive conversions, and boost your brand’s visibility
+                    across all digital platforms.</p>
+                <a href="./service.html" class="btn">Read More</a>
+            </div>
+        </section>
+
+        <!--Section Our Clients-->
+        <div class="our-clients">
+            <div>
+                <h1 class="header-color"> Our Clients</h1>
+            </div>
+            <section class="grid-c">
+                <div>
+                    <img src="./images/logoipsum-288.svg" alt="Client 1">
+                </div>
+                <div>
+                    <img src="./images/logoipsum-288.svg" alt="Client 2">
+                </div>
+                <div>
+                    <img src="./images/logoipsum-288.svg" alt="Client 3">
+                </div>
+                <div>
+                    <img src="./images/logoipsum-288.svg" alt="Client 4">
+                </div>
+            </section>
+        </div>
+
+        <!-- Projects template -->
+        <div>
+            <h1 class="header-color">Our Projects</h1>
+        </div>
+        <div class="projects-template">
+            <a href="./projects.html" class="project-column"
+                style="background-image: url('./images/websites\ -\ e-shops.jpg');">
+                <div class="overlay">
+                    <h3>Websites - E-Shops</h3>
+                    <p>We create modern, fast, and functional websites & e-shops.</p>
+                </div>
+            </a>
+            <a href="./projects.html" class="project-column"
+                style="background-image: url('./images/Social\ Media.jpg');">
+                <div class="overlay">
+                    <h3>Social Media</h3>
+                    <p> We manage social media with strategy, content & ads.</p>
+                </div>
+            </a>
+            <a href="./projects.html" class="project-column"
+                style="background-image: url('./images/Digital\ Solutions.jpg');">
+                <div class="overlay">
+                    <h3>Digital Solutions</h3>
+                    <p>We provide innovative digital solutions for growth & success. </p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="container-footer">
+            <!-- First section (Logo, social icons, about) -->
+            <div class="footer-section">
+                <a href="./index.html">
+                    <h1 class="logo-class">
+                        <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                    </h1>
+                </a>
+                <p class="footer-text">We are a dynamic digital agency specializing in website and eCommerce
+                    development, social media management, and advertising across all platforms.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./images/facebook-app-symbol.png" alt="Facebook" />
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="./images/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="./images/linkedin.png" alt="LinkedIn" />
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank">
+                        <img src="./images/twitter.png" alt="Twitter" />
+                    </a>
+                </div>
             </div>
 
-            <div class="containercontact">
-                <img src="./images/phone-call.png" alt="phone-icon" class="icon-space" />
-                <p>69 8 39 54 710</p>
+            <!-- Contact section -->
+            <div class="footer-section">
+                <h3 class="header-color-footer">Contact</h3>
+                <div class="contact-item">
+                    <img src="./images/maps-and-flags.png" alt="Location" />
+                    <p><a href="https://www.google.com/maps?q=Laskaridou+5,+Kallithea" target="_blank">Laskaridou 5,
+                            Kallithea</a></p>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/phone-call.png" alt="Phone" />
+                    <p><a href="tel:+306983954710">69 8 39 54 710</a></p>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/mail.png" alt="Email" />
+                    <p><a href="mailto:fatoualex@yahoo.gr">fatoualex@yahoo.gr</a></p>
+                </div>
             </div>
 
-            <div class="containercontact">
-                <img src="./images/mail.png" alt="mail-icon" class="icon-space" />
-                <p>mail@mail.com</p>
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3 class="header-color-footer">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./service.html">Service</a></li>
+                    <li><a href="./projects.html">Projects</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
             </div>
-        </div>
 
-        <!-- quick links section -->
-        <div class="quick-links">
-            <h3 class="header-color">Quick Links</h3>
-            <a href="home.com">Home</a>
-            <br />
-            <a href="about.gr">About</a>
-            <br />
-            <a href="schedule.gr">Service</a>
-            <br />
-            <a href="speakers.gr">Blog</a>
-            <br />
-            <a href="contact.gr">Contact</a>
-        </div>
+            <!-- Support -->
+            <div class="footer-section">
+                <h3 class="header-color-footer">Support</h3>
+                <ul class="footer-links">
+                    <li><a href="./policies-support.html">Help Center</a></li>
+                    <li><a href="./policies-support.html">Disclaimer</a></li>
+                    <li><a href="./policies-support.html">FAQs</a></li>
+                </ul>
+            </div>
+        </footer>
 
-        <!-- Support Section -->
-        <div>
-            <h3 class="header-color">Support</h3>
-            <a href="help-center.gr">Help Center</a>
-            <br />
-            <a href="privacy-policy.gr">Privacy Policy</a>
-            <br />
-            <a href="disclaimer.gr">Disclaimer</a>
-            <br />
-            <a href="faqs.gr">FAQs</a>
-        </div>
-    </div>
+        <hr>
 
-    <!-- copyright section -->
-    <div class="copyright">
-        <div>
+        <!-- Copyright Section -->
+        <div class="copyright">
             <p>Copyright © 2024 Alex Fatou</p>
+            <div class="copyright-links">
+                <a href="./policies-support.html">Privacy Policy</a>
+                <a href="./policies-support.html">Term & Services</a>
+            </div>
         </div>
-        <div class="copyright-links">
-            <a href="privacy-policy.gr" class="copyright-href">Privacy Policy</a>
-            <br />
-            <a href="term-&-services.gr">Term & Services</a>
-        </div>
-    </div>
 
 </body>
 

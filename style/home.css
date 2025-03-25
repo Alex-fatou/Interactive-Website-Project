@@ -1,0 +1,405 @@
+/*Section Welcome to my Agency */
+.header-color-section-a {
+    color: var(--btn-color);
+    margin-bottom: 20px;
+    animation: bounce 1s ease 1;
+    text-align: left;
+    font-size: 33px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .header-color-section-a {
+        font-size: 23px;
+    }
+}
+
+#section-a {
+    margin: 100px auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    #section-a {
+        margin: 10px auto;
+    }
+}
+
+#section-a .content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.content-wrap img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    #section-a .content-wrap {
+        flex-direction: column-reverse;
+    }
+
+    .content-wrap img {
+        max-width: 100%;
+    }
+}
+
+/* Why Choose Us */
+.container-why-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto 100px auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .container-why-us {
+        margin: 0 auto 50px auto;
+    }
+}
+
+.why-choose-us {
+    text-align: left;
+    width: 100%;
+}
+
+.subtitle {
+    color: var(--btn-color);
+    font-size: 14px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.feature {
+    width: 95%;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature:hover {
+    background: linear-gradient(to bottom, var(--btn-color), rgba(#9F90FD, 0.1));
+}
+
+.feature h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature h2 span {
+    color: var(--btn-color);
+    font-size: 16px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+.feature p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .feature {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Section Our Service */
+.grid-b {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto 100px auto;
+}
+
+@media (max-width: 600px) {
+    .grid-b {
+        margin: 0 auto 50px auto;
+    }
+}
+
+.grid-b div {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border: 1px solid var(--btn-color);
+    border-radius: 5px;
+}
+
+.grid-b div:hover {
+    background: linear-gradient(to bottom, var(--btn-color), rgba(var(--btn-color), 0.1));
+}
+
+.grid-b img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0px 20px 0px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .grid-b {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-b {
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+}
+
+/* Section Our Clients */
+.our-clients {
+    width: 80%;
+    margin: 0 auto 100px auto;
+}
+
+@media (max-width: 600px) {
+    .our-clients {
+        margin: 0 auto 50px auto;
+    }
+}
+
+.grid-c {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.grid-c img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .grid-c {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-c {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
+
+/* Projects template */
+.projects-template {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 80%;
+    margin: 0 auto 100px auto;
+}
+
+.project-column {
+    position: relative;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-column:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: var(--btn-color);
+}
+
+.overlay p {
+    font-size: 16px;
+    width: 80%;
+}
+
+/* Responsive*/
+@media (max-width: 1200px) {
+    .projects-template {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* svg icons */
+.svg-icon {
+    width: 30%;
+    background-color: var(--btn-color);
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Social Media svg animation */
+#FB {
+    animation: fb 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes fb {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#Insta {
+    animation: insta 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes insta {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#Play {
+    animation: play 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes play {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* Websites svg animation */
+#Brackets {
+    animation: brackets 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes brackets {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* E-Shop svg animation */
+#Cart {
+    animation: cart 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes cart {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* Digital Solutions svg animation */
+#Lines {
+    animation: lines 4s infinite linear;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes lines {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}

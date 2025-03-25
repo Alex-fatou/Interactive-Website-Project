@@ -1,0 +1,31 @@
+Next Steps & Guides
+The project is built using HTML, CSS, JavaScript, and JSON.
+
+index.html serves as the main page of the site.
+
+style.css contains the global styles and general classes used throughout the project.
+
+Each page is located in the root folder, with its corresponding CSS and JavaScript files organized in separate folders. The folder names match the page names. For example, the "About" page consists of about.html, about.css, and about.js.
+
+All images are stored in the images folder. However, SVG files for the homepage and project sections are kept separately.
+
+The json folder contains the filter.json file, which manages the filtering functionality.
+
+Moving forward, I believe the CSS and JavaScript code structure could be improved for better organization and maintainability.
+
+
+
+Release Notes
+Tasks	Παραδοτέο	Λεπτομέρειες	Ημερομηνία έναρξης 	Ημερομηνία λήξης 	Status
+Δημιουργεία Template	Project Plan 		16-Oct-2024	19-Oct-2024	Ready
+Περιγραφή Project	Project Plan 		20-Oct-2024	22-Oct-2024	Ready
+Sitemap 	Project Plan 		31-Oct-2024	4-Nov-2024	Ready
+Moodboart 	Project Plan 		31-Oct-2024	4-Nov-2024	Ready
+Προσχέδια	Project Plan 		31-Oct-2024	2-Nov-2024	Ready
+Basic HTML	HTML / CSS Layout		10-Nov-2024	20-Jan-2025	Ready
+Create Header	HTML / CSS Layout		10-Nov-2024	20-Jan-2025	Ready
+Create Boody 	HTML / CSS Layout		10-Nov-2024	20-Jan-2025	Ready
+Create Footer	HTML / CSS Layout		10-Nov-2024	20-Jan-2025	Ready
+CSS Layout	HTML / CSS Layout		10-Nov-2024	20-Jan-2025	Ready
+JavaScript Actions	Java Script 		20-Jan-2025	17-Feb-2025	Ready
+ Interactive Website Project	Interactive Website		20-Jan-2025	17-Feb-2025	Ready

@@ -5,21 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="./style/home.css">
+    <script src="./scripts/scripts.js" defer></script>
+    <script src="./scripts/about.js" defer></script>
 </head>
+
 <body>
 
-    <!--NAVBAR-->
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" onclick="backToTop()">Back to Top</button>
+
+    <!-- MENOU-->
     <div class="navbar">
-        <div class="container flex">
-            <h1 class="logo">Basic HTML - CSS</h1>
+        <div class="container-menou">
+            <a href="./index.html">
+                <h1 class="logo-class">
+                    <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                </h1>
+            </a>
+            <!-- burger menou -->
+            <div class="burger" onclick="toggleMenu()">&#9776;</div>
             <nav>
-                <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/service.html">Services</a></li>
-                    <li><a href="/blog.html">Blog</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                <ul id="nav-links">
+                    <li class="nav-links-li"><a href="./index.html">Home</a></li>
+                    <li class="nav-links-li"><a href="./about.html">About</a></li>
+                    <li class="nav-links-li"><a href="./service.html">Services</a></li>
+                    <li class="nav-links-li"><a href="./projects.html">Projects</a></li>
+                    <li class="nav-links-li"><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,183 +42,155 @@
 
     <!-- header image -->
     <section class="bg-section">
-        <div>
+        <div class="content-header-image">
             <h1>About Us</h1>
         </div>
     </section>
-
-    <!--About my Agency-->
-    <section id="section-a" class="grid">
+    <!--About my Agency  -->
+    <section id="section-about" class="width-sections">
         <div class="content-wrap">
-            <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION A">
-            <div class="text-center">
-                <h1>About my Agency</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa amet molestias quam
-                    accusantium eum, quis eaque dolore vitae ducimus animi assumenda, odit cupiditate deleniti, voluptas
-                    officiis impedit doloremque harum!</p>
+            <img src="./images/About my Agency.jpg" alt="About my Agency">
+            <div>
+                <h1 class="header-color-section-a">About my Agency</h1>
+                <p>We are a dynamic digital agency specializing in website and eCommerce development, social media
+                    management, and advertising across all platforms. Our goal is to help businesses grow by
+                    creating impactful online experiences and targeted marketing strategies. With a passion for
+                    innovation and results-driven solutions, we turn ideas into digital success.</p>
             </div>
         </div>
     </section>
 
+    <section id="section-about" class="width-sections">
+        <div class="content-wrap">
+            <div>
+                <p>We combine creativity with technical expertise to deliver high-quality, user-friendly websites and
+                    online stores that not only meet but exceed client expectations. Our team is dedicated to crafting
+                    seamless digital experiences that enhance user engagement and drive conversions. Whether it's
+                    through optimizing your website for search engines (SEO), running strategic ad campaigns, or
+                    managing your brand’s social media presence, we ensure that your business stands out in a
+                    competitive online landscape.</p>
+            </div>
+            <img src="./images/About my Agency 1.jpg" alt="About my Agency 1" class="hide-image">
+        </div>
+    </section>
 
     <!--our experience  -->
-    <h1> Οur experience</h1>
-    <section class="our-experience">
-        <div class="box">
-            <img src="/images/check.png" alt="Εικόνα" class="box-image">
-            <h1>99%</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
-        </div>
-        <div class="box">
-            <img src="/images/check.png" alt="Εικόνα" class="box-image">
-            <h1>99%</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
-        </div>
-        <div class="box">
-            <img src="/images/check.png" alt="Εικόνα" class="box-image">
-            <h1>99%</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
-        </div>
-        <div class="box">
-            <img src="/images/check.png" alt="Εικόνα" class="box-image">
-            <h1>99%</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, facilis?</p>
-        </div>
-    </section>
-
-    <!-- About my Agency (2) -->
-    <section id="section-a" class="grid">
-        <div class="content-wrap">
-            <div class="text-center">
-                <h1>About my Agency</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsa amet molestias quam
-                    accusantium eum, quis eaque dolore vitae ducimus animi assumenda, odit cupiditate deleniti, voluptas
-                    officiis impedit doloremque harum!</p>
-                <img src="/images/close-up-hands-business-concept.jpg" alt="SECTION A">
+    <div class="container-section">
+        <h2 class="header-color-section-a">Οur experience</h2>
+        <section class="our-experience">
+            <div class="box">
+                <h4 class="box-header">Transforming Ideas into Digital Experiences</h4>
+                <p>We specialize in creating and developing modern websites and eCommerce solutions. Our goal is to
+                    deliver digital experiences that combine aesthetics and functionality, allowing businesses to stand
+                    out in the online world. With our expertise and knowledge, we help businesses build strong online
+                    presences that enhance audience engagement and contribute to their growth.</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress"></div>
+                    <span class="percentage" id="percentage">0%</span>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!--SECTION C (Our Clients)-->
-    <div>
-        <h1> Our Clients</h1>
+        </section>
     </div>
 
-    <section class="grid-c">
+    <!--Section Our Clients-->
+    <div class="our-clients">
         <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
+            <h1 class="header-color"> Our Clients</h1>
         </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-
-        <div>
-            <img src="/images/logoipsum-288.svg" alt="SECTION B">
-        </div>
-    </section>
-
-    <!--FOOTER-->
-
-    <div class="container-footer">
-        <!-- First sections (logo social icons etc) -->
-        <div>
-            <!-- <img src="./images/logo.png" alt="logo-website" class="logo-width" /> -->
-            <h1 class="logo">Basic HTML - CSS</h1>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis,
-                nesciunt? <br />orem, ipsum dolor sit amet consectetur
-                adipisicing elit. Quis, nesciunt?
-            </p>
+        <section class="grid-c">
             <div>
-                <a href="https://www.facebook.com/">
-                    <img src="./images/facebook-app-symbol.png" alt="fb-icon" class="icon-space" /></a>
-                <a href="https://www.instagram.com/">
-                    <img src="./images/instagram.png" alt="insta-icon" class="icon-space" /></a>
-                <a href="https://www.linkedin.com/">
-                    <img src="./images/linkedin.png" alt="linkedin-icon" class="icon-space" /></a>
-                <a href="https://www.twitter.com/">
-                    <img src="./images/twitter.png" alt="twitter-icon" class="icon-space" /></a>
+                <img src="./images/logoipsum-288.svg" alt="Client 1">
             </div>
-        </div>
-
-        <!-- contact section -->
-        <div>
-            <h3>Contact</h3>
-
-            <div class="containercontact">
-                <img src="./images/maps-and-flags.png" alt="map-icon" class="icon-space" />
-                <p>Lorem ipsum dolor sit amet.</p>
+            <div>
+                <img src="./images/logoipsum-288.svg" alt="Client 2">
             </div>
-
-            <div class="containercontact">
-                <img src="./images/phone-call.png" alt="phone-icon" class="icon-space" />
-                <p>69 8 39 54 710</p>
+            <div>
+                <img src="./images/logoipsum-288.svg" alt="Client 3">
             </div>
-
-            <div class="containercontact">
-                <img src="./images/mail.png" alt="mail-icon" class="icon-space" />
-                <p>mail@mail.com</p>
+            <div>
+                <img src="./images/logoipsum-288.svg" alt="Client 4">
             </div>
-        </div>
-
-        <!-- quick links section -->
-        <div class="quick-links">
-            <h3>Quick Links</h3>
-            <a href="home.com">Home</a>
-            <br />
-            <a href="about.gr">About</a>
-            <br />
-            <a href="schedule.gr">Service</a>
-            <br />
-            <a href="speakers.gr">Blog</a>
-            <br />
-            <a href="contact.gr">Contact</a>
-        </div>
-
-        <!-- Support Section -->
-        <div>
-            <h3>Support</h3>
-            <a href="help-center.gr">Help Center</a>
-            <br />
-            <a href="privacy-policy.gr">Privacy Policy</a>
-            <br />
-            <a href="disclaimer.gr">Disclaimer</a>
-            <br />
-            <a href="faqs.gr">FAQs</a>
-        </div>
+        </section>
     </div>
 
-    <!-- copyright section -->
+    <!-- Footer -->
+    <footer class="container-footer">
+        <!-- First section (Logo, social icons, about) -->
+        <div class="footer-section">
+            <a href="./index.html">
+                <h1 class="logo-class">
+                    <span style="color: #9F90FD;">Code</span><span style="color: #FFFFFF;">Craft</span>
+                </h1>
+            </a>
+            <p class="footer-text">We are a dynamic digital agency specializing in website and eCommerce
+                development, social media management, and advertising across all platforms.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./images/facebook-app-symbol.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./images/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <img src="./images/linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="https://www.twitter.com/" target="_blank">
+                    <img src="./images/twitter.png" alt="Twitter" />
+                </a>
+            </div>
+        </div>
+
+        <!-- Contact section -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Contact</h3>
+            <div class="contact-item">
+                <img src="./images/maps-and-flags.png" alt="Location" />
+                <p><a href="https://www.google.com/maps?q=Laskaridou+5,+Kallithea" target="_blank">Laskaridou 5,
+                        Kallithea</a></p>
+            </div>
+            <div class="contact-item">
+                <img src="./images/phone-call.png" alt="Phone" />
+                <p><a href="tel:+306983954710">69 8 39 54 710</a></p>
+            </div>
+            <div class="contact-item">
+                <img src="./images/mail.png" alt="Email" />
+                <p><a href="mailto:fatoualex@yahoo.gr">fatoualex@yahoo.gr</a></p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./service.html">Service</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-section">
+            <h3 class="header-color-footer">Support</h3>
+            <ul class="footer-links">
+                <li><a href="./policies-support.html">Help Center</a></li>
+                <li><a href="./policies-support.html">Disclaimer</a></li>
+                <li><a href="./policies-support.html">FAQs</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <hr>
+
+    <!-- Copyright Section -->
     <div class="copyright">
-        <div>
-            <p>Copyright © 2024 Alex Fatou</p>
-        </div>
+        <p>Copyright © 2024 Alex Fatou</p>
         <div class="copyright-links">
-            <a href="privacy-policy.gr" class="copyright-href">Privacy Policy</a>
-            <br />
-            <a href="term-&-services.gr">Term & Services</a>
+            <a href="./policies-support.html">Privacy Policy</a>
+            <a href="./policies-support.html">Term & Services</a>
         </div>
     </div>
-
-
-
 </body>
 
 </html>
